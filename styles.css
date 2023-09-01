@@ -1,0 +1,95 @@
+html {
+    font-size: 10px;
+    height: 100vh;
+}
+
+body, main, section, .buttons-container {
+    height: 100%;
+}
+
+.buttons-container {
+    background-image: url("assets/images/carnaby-82KWr7KHwDg-unsplash 1.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.button {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border: 0;
+    padding: 0;
+    border-radius: 4rem;
+    opacity: 0.8;
+}
+
+.green-button {
+    background-image: url("assets/icons/green-button.png");
+}
+
+.blue-button {
+    background-image: url("assets/icons/blue-button.png");
+}
+
+#stadium {
+    top: 45%;
+    left: 33%;
+}
+
+#railway-station {
+    top: 37%;
+    left: 63%;
+}
+
+#business-hotel {
+    top: 61%;
+    left: 69%;
+}
+
+#beach-hotel {
+    top: 73%;
+    left: 58%;
+}
+
+#bus-station {
+    top: 27%;
+    left: 27%;
+}
+
+#bridge {
+    top: 66%;
+    left: 20%;
+}
+
+#hall {
+    top: 59%;
+    left: 57%;
+}
+
+#conference-hall {
+    top: 70%;
+    right: 10%;
+}
+
+#living-house {
+    top: 18%;
+    left: 75%;
+}
+
+#hostel {
+    top: 45%;
+    right: 20%;
+}
+
+@media (max-width: 1850px) {
+    #bridge {
+        left: 17%;
+    }
+}
+
+@media (max-width: 1600px) {
+    #bridge {
+        left: 15%;
+    }
+}
