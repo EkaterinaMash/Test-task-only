@@ -4,15 +4,24 @@ html {
     font-family: Arial, sans-serif;
 }
 
-body, main, section, .buttons-container {
+body, main, .block, .buttons-container {
     height: 100%;
 }
 
+.block {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .buttons-container {
-    background-image: url("assets/images/carnaby-82KWr7KHwDg-unsplash 1.png");
-    background-size: cover;
-    background-position: center center;
     position: relative;
+}
+
+.background-image {
+    height: 100%;
+    width: auto;
 }
 
 .button {
@@ -53,22 +62,22 @@ body, main, section, .buttons-container {
 
 #stadium {
     top: 45%;
-    left: 33%;
+    right: 63%
 }
 
 #railway-station {
     top: 37%;
-    left: 63%;
+    right: 40%;
 }
 
 #business-hotel {
     top: 61%;
-    left: 69%;
+    right: 30%;
 }
 
 #beach-hotel {
-    top: 73%;
-    left: 58%;
+    top: 75%;
+    right: 40%;
 }
 
 #bus-station {
@@ -78,37 +87,46 @@ body, main, section, .buttons-container {
 
 #bridge {
     top: 66%;
-    left: 20%;
+    left: 23%;
 }
 
 #hall {
     top: 59%;
-    left: 57%;
+    right: 42%;
 }
 
 #conference-hall {
     top: 70%;
-    right: 10%;
+    right: 15%;
 }
 
 #living-house {
-    top: 18%;
-    left: 75%;
+    top: 20%;
+    right: 26%;
 }
 
 #hostel {
     top: 45%;
-    right: 20%;
+    right: 25%;
 }
 
-@media (max-width: 1850px) {
-    #bridge {
-        left: 17%;
+/* Блок занимает всю ширину экрана,то есть его ширина равна 100vw.
+   Если высота экрана составляет 78% и более процентов от его ширины, то строения на фоновом изображении будут обрезаться.
+   Например, при ширине 1920px и высоте 1700px обрезаются значительные части построек.
+   Для того, чтобы пользователь мог видеть эти постройки при таком соотношении ширины и высоты, я добавила горизонтальный скролл для случаев, если высота больше или равна 78% от ширины. */
+
+@media (max-width: 1920px) and (min-height: 78vw) {
+    .block {
+        overflow-x: scroll;
+    }
+
+    .block::-webkit-scrollbar {
+        width: 0.2rem;
+        background-color: cadetblue;
+    }
+
+    .block::-webkit-scrollbar-thumb {
+        background-color: gainsboro;
     }
 }
 
-@media (max-width: 1600px) {
-    #bridge {
-        left: 15%;
-    }
-}

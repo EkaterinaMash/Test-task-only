@@ -1,4 +1,15 @@
 const buttonsContainer = document.querySelector('.buttons-container');
+const backgroundImage = document.querySelector('.background-image');
+
+function setButtonsContainerWidth() {
+    buttonsContainer.style.width = `${backgroundImage.offsetWidth}px`;
+}
+
+setButtonsContainerWidth();
+
+window.onresize = function () {
+    setButtonsContainerWidth();
+}
 
 buttonsContainer.onclick = function (event) {
     if (event.target.tagName === 'BUTTON') {
@@ -12,3 +23,4 @@ buttonsContainer.onclick = function (event) {
         }
     }
 }
+
